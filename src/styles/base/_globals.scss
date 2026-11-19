@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as *;
+
+body {
+  background-color: $color-bg;
+  color: $color-text;
+}
+
+#root {
+  min-height: 100vh;
+}
