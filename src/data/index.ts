@@ -1,0 +1,10 @@
+export { hero } from "./landing.data";
+export { benefitsSection } from "./landing.data";
+export { benefits } from "./landing.data";
+export { functionalitiesSection } from "./landing.data";
+export { functionalities } from "./landing.data";
+export { howItWorksSection } from "./landing.data";
+export { howItWorks } from "./landing.data";
+export { cta } from "./landing.data";
+export { faqsSection } from "./landing.data";
+export { faqs } from "./landing.data";
