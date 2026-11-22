@@ -1,94 +1,82 @@
 import "./LandingPage.scss";
+import {
+  hero,
+  benefitsSection,
+  benefits,
+  functionalitiesSection,
+  functionalities,
+  howItWorksSection,
+  howItWorks,
+  cta,
+  faqsSection,
+  faqs,
+} from "@/data";
 
 function LandingPage() {
   return (
-    <main>
+    <main className="landing">
       <section className="hero">
-        <h1>La salud de tu mascota, siempre bajo control</h1>
-        <p>
-          PawCare centraliza historiales clínicos, curvas de peso biométricas,
-          calendarios de vacunación, tratamientos farmacológicos y recordatorios
-          inteligentes con la precisión de un software clínico y la sencillez
-          que mereces
-        </p>
+        <h1 className="hero__title">{hero.title}</h1>
+        <p className="hero__description">{hero.description}</p>
       </section>
 
       {/* Benefits */}
       <section className="benefits">
-        <h2>Todo el cuidado de tu mascota, más sencillo</h2>
-        <p>
-          Sabemos que mantener al día toda la información de salud de tu mascota
-          puede resultar complicado. PawCare te ayuda a tenerlo todo organizado
-          para que puedas centrarte en lo que realmente importa: su bienestar.
-        </p>
-        <article>
-          <h3>Toda su información en un mismo lugar</h3>
-          <p>
-            Olvídate de buscar entre documentos, notas y fotografías para
-            encontrar información importante.
-          </p>
-        </article>
-        <article>
-          <h3>Más tranquilidad en su cuidado</h3>
-          <p>
-            Ten presentes las fechas importantes y evita pasar por alto sus
-            cuidados programados.
-          </p>
-        </article>
-        <article>
-          <h3>Conoce mejor su evolución</h3>
-          <p>
-            Consulta su información de salud y lleva un seguimiento de su
-            bienestar a lo largo del tiempo.
-          </p>
-        </article>
+        <h2 className="benefits__title">{benefitsSection.title}</h2>
+        <p className="benefits__description">{benefitsSection.description}</p>
+        <div className="benefits__grid">
+          {benefits.map((benefit) => {
+            const Icon = benefit.icon;
+
+            return (
+              <article className="benefits__card" key={benefit.id}>
+                <Icon size={24} aria-hidden="true" />
+                <div className="benfefits__card-wrapper">
+                  <h3 className="benefits__card-title">{benefit.title}</h3>
+                  <p className="benefits__card-description">
+                    {benefit.description}
+                  </p>
+                </div>
+              </article>
+            );
+          })}
+        </div>
       </section>
 
       {/* Functionalities */}
       <section className="functionalities">
-        <h2>Todo lo que necesitas para cuidar de su salud</h2>
-        <p>
-          Descubre las herramientas que te ayudarán a mantener organizada toda
-          la información de tu mascota.
-        </p>
-        <article>
-          <h3>Perfiles de mascotas</h3>
-          <p>Crea y personaliza un perfil para cada una de tus mascotas.</p>
-        </article>
-        <article>
-          <h3>Historial médico</h3>
-          <p>Registra y consulta sus antecedentes y visitas veterinarias.</p>
-        </article>
-        <article>
-          <h3>Vacunas y desparasitaciones</h3>
-          <p>Registra las vacunas y los tratamientos antiparasitarios.</p>
-        </article>
-        <article>
-          <h3>Medicamentos y tratamientos</h3>
-          <p>Guarda información sobre medicación y tratamientos.</p>
-        </article>
-        <article>
-          <h3>Citas veterinarias</h3>
-          <p>Organiza y consulta las próximas visitas al veterinario.</p>
-        </article>
-        <article>
-          <h3>Seguimiento de salud</h3>
-          <p>Registra el peso y consulta su evolución.</p>
-        </article>
-        <article>
-          <h3>Documentos médicos</h3>
-          <p>Almacena informes, recetas y otros documentos.</p>
-        </article>
-        <article>
-          <h3>Recordatorios</h3>
-          <p>Recibe avisos sobre fechas y cuidados importantes.</p>
-        </article>
+        <h2 className="functionalities__title">{functionalitiesSection.title}</h2>
+        <p className="functionalities__description">{functionalitiesSection.description}</p>
+        <div className="functionalities__grid">
+          {functionalities.map((functionalitie) => {
+            const Icon = functionalitie.icon;
+
+            return (
+              <article
+                className="functionalities__card"
+                key={functionalitie.id}
+              >
+                <Icon size={24} aria-hidden="true" />
+                <div className="funcionalities__card-wrapper">
+                  <h3 className="functionalities__card-title">
+                    {functionalitie.title}
+                  </h3>
+                  <p className="functionalities__card-description">
+                    {functionalitie.description}
+                  </p>
+                </div>
+              </article>
+            );
+          })}
+        </div>
       </section>
 
       {/* Dashboard preview */}
       <section className="dashboard-preview">
-        <h2>Toda su información de un vistazo</h2>
-        <p>
+        <h2 className="dashboard-preview__title">
+          Toda su información de un vistazo
+        </h2>
+        <p className="dashboard-preview__description">
           Consulta fácilmente el estado de salud de tu mascota, sus próximas
           vacunas, tratamientos y citas veterinarias desde un único panel.
         </p>
@@ -97,30 +85,44 @@ function LandingPage() {
 
       {/* How it works */}
       <section className="how-it-works">
-        <h2>Cómo funciona</h2>
-        <h3>Crea tu cuenta</h3>
-        <p>Regístrate y empieza a utilizar PawCare.</p>
-        <h3>Añade a tu mascota</h3>
-        <p>Crea su perfil con toda su información básica.</p>
-        <h3>Organiza sus cuidados</h3>
-        <p>
-          Registra su historial médico, controla sus vacunas y mantén
-          actualizada su información.
-        </p>
-      </section>
-
-      {/* FAQ's */}
-      <section className="faqs">
-        <h2>Preguntas frecuentes</h2>
+        <h2 className="how-it-works__title">{howItWorksSection.title}</h2>
+        <p>{howItWorksSection.description}</p>
+        <div className="how-it-works__steps">
+          {howItWorks.map((how) => {
+            const Icon = how.icon;
+            return (
+              <article className="how-it-works__step" key={how.id}>
+                <Icon size={24} aria-hidden="true" />
+                <div className="how-it-works__step-wrapper">
+                  <h3 className="how-it-works__step-title">{how.title}</h3>
+                  <p className="how-it-works__step-description">
+                    {how.description}
+                  </p>
+                </div>
+              </article>
+            );
+          })}
+        </div>
       </section>
 
       {/* CTA */}
       <section className="cta">
-        <h2>Su bienestar empieza con un buen cuidado</h2>
-        <p>
-          Ten toda la información de salud de tu mascota organizada y siempre a
-          mano
-        </p>
+        <h2 className="cta__title">{cta.title}</h2>
+        <p className="cta__description">{cta.description}</p>
+      </section>
+
+      {/* FAQ's */}
+      <section className="faqs">
+        <h2 className="faqs__title">{faqsSection.title}</h2>
+        <p>{faqsSection.description}</p>
+        <div className="faqs__list">
+          {faqs.map((faq) => (
+            <article className="faqs__item" key={faq.id}>
+              <h3 className="faqs__question">{faq.question}</h3>
+              <p className="faqs__answer">{faq.answer}</p>
+            </article>
+          ))}
+        </div>
       </section>
     </main>
   );
