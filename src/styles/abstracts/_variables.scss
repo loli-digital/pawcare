@@ -1,6 +1,38 @@
+// Font Sizes
+
+// Mobile
+$font-size-h1-mobile: 2.25rem; // 36px
+$font-size-h2-mobile: 1.75rem; // 28px
+$font-size-h3-mobile: 1.5rem; // 24px
+$font-size-body-mobile: 1rem; // 16px
+
+// Tablet
+$font-size-h1-tablet: 2.875rem; // 46px
+$font-size-h2-tablet: 2.25rem; // 36px
+$font-size-h3-tablet: 1.75rem; // 28px
+$font-size-body-tablet: 1rem; // 16px
+
+// Desktop
+$font-size-h1-desktop: 3.5rem; // 56px
+$font-size-h2-desktop: 2.5rem; // 40px
+$font-size-h3-desktop: 2rem; // 32px
+$font-size-body-desktop: 1.125rem; // 18px
+
+// Line Heights
+
+$line-height-tight: 1.1;
+$line-height-heading: 1.2;
+$line-height-body: 1.6;
+$line-height-relaxed: 1.8;
+
 // Typography
 
 $font-primary: "Inter", sans-serif;
+
+$h1-line-height: $line-height-tight;
+$h2-line-height: $line-height-heading;
+$h3-line-height: $line-height-heading;
+$p-line-height: $line-height-body;
 
 // Brand
 
@@ -25,6 +57,25 @@ $color-text-secondary: #475569;
 $color-text-tertiary: #64748b;
 
 $color-border: #e2e8f0;
+
+// Spacing
+
+$space-xs: 0.25rem; // 4px
+$space-sm: 0.5rem;  // 8px
+$space-md: 1rem;    // 16px
+$space-lg: 1.5rem;  // 24px
+$space-xl: 2rem;    // 32px
+$space-2xl: 3rem;   // 48px
+$space-3xl: 4rem;   // 64px
+$space-4xl: 6rem;   // 96px
+$space-5xl: 8rem;   // 128px
+
+// Container
+
+$container-sm: 42rem; // 672px
+$container-md: 56rem; // 896px
+$container-lg: 72rem; // 1152px
+$container-xl: 80rem; // 1280px
 
 // Radius
 
