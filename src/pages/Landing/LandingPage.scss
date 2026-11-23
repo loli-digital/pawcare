@@ -1,0 +1,53 @@
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/mixins" as *;
+@use "@/styles/base/globals" as *;
+
+.landing {
+  width: 100%;
+  padding-top: $space-3xl;
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section {
+    h1,
+    h2,
+    p {
+      text-align: center;
+    }
+  }
+}
+
+.hero {
+  width: 100%;
+  max-width: $container-xl;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $space-md;
+  padding-right: $space-md;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1{
+    max-width: $container-md;
+    margin-bottom: $space-md;
+  }
+
+  p {
+    max-width: $container-sm;
+    margin-bottom: $space-lg;
+  }
+
+  @include laptop {
+    padding-left: $space-xl;
+    padding-right: $space-xl;
+  }
+}
