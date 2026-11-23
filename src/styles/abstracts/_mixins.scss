@@ -1,23 +1,25 @@
+@use "./breakpoints" as *;
+
 @mixin mobile-xl {
-  @media (min-width: 640px) {
+  @media (min-width: $mobile-xl) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @content;
   }
 }
 
 @mixin laptop {
-  @media (min-width: 1024px) {
+  @media (min-width: $laptop) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: 1280px) {
+  @media (min-width: $desktop) {
     @content;
   }
 }
