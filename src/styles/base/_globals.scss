@@ -1,10 +1,43 @@
-@use "../abstracts/variables" as *;
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+#root {
+  min-height: 100vh;
+}
 
 body {
   background-color: $color-bg;
   color: $color-text;
 }
 
-#root {
-  min-height: 100vh;
+h1 {
+  line-height: $h1-line-height;
+  font-size: $font-size-h1-mobile;
+
+  @include mobile-xl {
+    font-size: $font-size-h1-tablet;
+  }
+
+  @include desktop {
+    font-size: $font-size-h1-desktop;
+  }
+}
+
+h2 {
+  line-height: $h2-line-height;
+  font-size: $font-size-h2-mobile;
+
+  @include mobile-xl {
+    font-size: $font-size-h2-tablet;
+  }
+
+  @include desktop {
+    font-size: $font-size-h2-desktop;
+  }
+}
+
+p {
+  color: $color-text-secondary;
+  line-height: $p-line-height;
+  font-size: $font-size-body-mobile;
 }
