@@ -71,7 +71,8 @@
 // Benefits & Functionalities section
 .benefits > p,
 .functionalities > p,
-.how-it-works > p {
+.how-it-works > p,
+.faqs > p {
   margin-bottom: $space-lg;
 
   @include laptop {
@@ -178,5 +179,45 @@
   @include desktop {
     min-width: 27rem;
     min-height: 10rem;
+  }
+}
+
+// FAQ's
+.faqs {
+  margin-bottom: $space-2xl;
+}
+
+.faqs__grid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $space-md;
+  padding-right: $space-md;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: $space-md;
+
+  @include laptop {
+    max-width: $container-sm;
+  }
+
+  details {
+    width: 100%;
+    padding: $space-lg;
+    border: 1px solid $color-border;
+    border-radius: 1rem;
+    background-color: $color-bg-card;
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  details p {
+    margin-top: $space-md;
   }
 }
