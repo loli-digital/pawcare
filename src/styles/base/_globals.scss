@@ -10,6 +10,11 @@ body {
   color: $color-text;
 }
 
+h1,
+h2 {
+  text-align: center;
+}
+
 h1 {
   line-height: $h1-line-height;
   font-size: $font-size-h1-mobile;
@@ -24,6 +29,7 @@ h1 {
 }
 
 h2 {
+  padding-bottom: $space-md;
   line-height: $h2-line-height;
   font-size: $font-size-h2-mobile;
 
