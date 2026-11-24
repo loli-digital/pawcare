@@ -12,42 +12,145 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: $space-2xl;
+
+    @include laptop {
+      gap: $space-4xl;
+    }
   }
 
   section {
-    h1,
-    h2,
-    p {
+    p:not(:last-child) {
       text-align: center;
     }
   }
 }
-
-.hero {
+// Section styles
+.hero,
+.benefits,
+.benefits__grid,
+.functionalities,
+.functionalities__grid,
+.dashboard-preview,
+.how-it-works,
+.faqs {
   width: 100%;
   max-width: $container-xl;
   margin-left: auto;
   margin-right: auto;
   padding-left: $space-md;
   padding-right: $space-md;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  h1{
-    max-width: $container-md;
-    margin-bottom: $space-md;
-  }
-
   p {
     max-width: $container-sm;
-    margin-bottom: $space-lg;
   }
 
   @include laptop {
     padding-left: $space-xl;
     padding-right: $space-xl;
+  }
+}
+
+// Hero section
+.hero {
+  h1 {
+    max-width: $container-md;
+    margin-bottom: $space-md;
+  }
+  p {
+    text-align: center;
+  }
+}
+
+// Benefits & Functionalities section
+.benefits > p,
+.functionalities > p {
+  margin-bottom: $space-lg;
+
+  @include laptop {
+    margin-bottom: $space-xl;
+  }
+}
+
+.benefits__grid,
+.functionalities__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-md;
+}
+
+.benefits__card,
+.functionalities__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  gap: $space-xs;
+
+  padding: $space-md;
+  border: 2px solid $color-border;
+  border-radius: $radius-s;
+  box-shadow: $shadow-m;
+  background-color: $color-bg-card;
+}
+
+.benefits__icon,
+.functionalities__icon {
+  width: 2rem;
+  height: 2rem;
+  padding: $space-xs;
+  color: $color-primary;
+  background-color: $color-bg-primary;
+  border-radius: $radius-s;
+}
+
+// Benefits
+.benefits__grid {
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.benefits__card {
+  min-width: 10rem;
+  min-height: 12rem;
+
+  @include tablet {
+    min-width: 12rem;
+    min-height: 18rem;
+  }
+
+  @include laptop {
+    min-height: 16rem;
+  }
+
+  @include desktop {
+    min-width: 27rem;
+    min-height: 10rem;
+  }
+}
+
+// Functionalities
+.functionalities__grid {
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.functionalities__card {
+  min-width: 8rem;
+  min-height: 10rem;
+
+  @include laptop {
+    min-width: 21rem;
   }
 }
