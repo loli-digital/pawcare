@@ -11,6 +11,7 @@ import {
   faqsSection,
   faqs,
 } from "@/data";
+import dogAndCat from "@/assets/images/dog-and-cat-CTA.svg";
 
 function LandingPage() {
   return (
@@ -29,7 +30,11 @@ function LandingPage() {
               const Icon = benefit.icon;
               return (
                 <article className="benefits__card" key={benefit.id}>
-                  <Icon size={24} aria-hidden="true" className="benefits__icon"/>
+                  <Icon
+                    size={24}
+                    aria-hidden="true"
+                    className="benefits__icon"
+                  />
                   <div className="benefits__card-wrapper">
                     <h3>{benefit.title}</h3>
                     <p>{benefit.description}</p>
@@ -51,7 +56,11 @@ function LandingPage() {
                   className="functionalities__card"
                   key={functionalitie.id}
                 >
-                  <Icon size={24} aria-hidden="true" className="functionalities__icon"/>
+                  <Icon
+                    size={24}
+                    aria-hidden="true"
+                    className="functionalities__icon"
+                  />
                   <div className="funcionalities__card-wrapper">
                     <h3>{functionalitie.title}</h3>
                     <p>{functionalitie.description}</p>
@@ -79,12 +88,14 @@ function LandingPage() {
               const Icon = how.icon;
               return (
                 <article className="how-it-works__card" key={how.id}>
-                  <Icon size={24} aria-hidden="true" className="how-it-works__icon"/>
+                  <Icon
+                    size={24}
+                    aria-hidden="true"
+                    className="how-it-works__icon"
+                  />
                   <div className="how-it-works__card-wrapper">
                     <h3>{how.title}</h3>
-                    <p>
-                      {how.description}
-                    </p>
+                    <p>{how.description}</p>
                   </div>
                 </article>
               );
@@ -93,8 +104,15 @@ function LandingPage() {
         </section>
         {/* CTA */}
         <section className="cta">
-          <h2>{cta.title}</h2>
-          <p>{cta.description}</p>
+          <div className="cta__content">
+            <div className="cta__text">
+              <h2>{cta.title}</h2>
+              <p>{cta.description}</p>
+            </div>
+
+            <img src={dogAndCat} alt="Perro y gato juntos" aria-hidden="true" className="cta__image"/>
+          </div>
+            <button>Crear cuenta</button>
         </section>
         {/* FAQ's */}
         <section className="faqs">
