@@ -100,12 +100,12 @@ function LandingPage() {
         <section className="faqs">
           <h2>{faqsSection.title}</h2>
           <p>{faqsSection.description}</p>
-          <div className="faqs__list">
+          <div className="faqs__grid">
             {faqs.map((faq) => (
-              <article className="faqs__item" key={faq.id}>
-                <h3 className="faqs__question">{faq.question}</h3>
-                <p className="faqs__answer">{faq.answer}</p>
-              </article>
+              <details key={faq.id}>
+                <summary>{faq.question}</summary>
+                <p>{faq.answer}</p>
+              </details>
             ))}
           </div>
         </section>
