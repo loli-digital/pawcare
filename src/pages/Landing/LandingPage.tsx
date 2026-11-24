@@ -29,12 +29,10 @@ function LandingPage() {
               const Icon = benefit.icon;
               return (
                 <article className="benefits__card" key={benefit.id}>
-                  <Icon size={24} aria-hidden="true" />
-                  <div className="benfefits__card-wrapper">
-                    <h3 className="benefits__card-title">{benefit.title}</h3>
-                    <p className="benefits__card-description">
-                      {benefit.description}
-                    </p>
+                  <Icon size={24} aria-hidden="true" className="benefits__icon"/>
+                  <div className="benefits__card-wrapper">
+                    <h3>{benefit.title}</h3>
+                    <p>{benefit.description}</p>
                   </div>
                 </article>
               );
@@ -53,14 +51,10 @@ function LandingPage() {
                   className="functionalities__card"
                   key={functionalitie.id}
                 >
-                  <Icon size={24} aria-hidden="true" />
+                  <Icon size={24} aria-hidden="true" className="functionalities__icon"/>
                   <div className="funcionalities__card-wrapper">
-                    <h3 className="functionalities__card-title">
-                      {functionalitie.title}
-                    </h3>
-                    <p className="functionalities__card-description">
-                      {functionalitie.description}
-                    </p>
+                    <h3>{functionalitie.title}</h3>
+                    <p>{functionalitie.description}</p>
                   </div>
                 </article>
               );
