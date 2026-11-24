@@ -182,6 +182,46 @@
   }
 }
 
+// CTA
+.cta {
+  width: 100%;
+  height: 30rem;
+  padding: $space-md;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: $space-md;
+
+  background-color: rgba(124, 58, 237, 0.25);
+  box-shadow: $shadow-m;
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .cta__image {
+      width: 100%;
+      max-width: 15rem;
+    }
+  }
+
+  &__text {
+    max-width: $container-xl;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $space-md;
+    padding-right: $space-md;
+
+    p {
+      text-align: center;
+    }
+  }
+}
+
 // FAQ's
 .faqs {
   margin-bottom: $space-2xl;
