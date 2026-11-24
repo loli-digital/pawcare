@@ -19,14 +19,12 @@ $font-size-h3-desktop: 2rem; // 32px
 $font-size-body-desktop: 1.125rem; // 18px
 
 // Line Heights
-
 $line-height-tight: 1.1;
 $line-height-heading: 1.2;
 $line-height-body: 1.6;
 $line-height-relaxed: 1.8;
 
 // Typography
-
 $font-primary: "Inter", sans-serif;
 
 $h1-line-height: $line-height-tight;
@@ -35,20 +33,19 @@ $h3-line-height: $line-height-heading;
 $p-line-height: $line-height-body;
 
 // Brand
-
 $color-primary: #7c3aed;
 $color-primary-hover: #6d28d9;
+$color-bg-primary: #ECE2FD;
 
 // States
-
 $color-success: #14b8a6;
 $color-warning: #f59e0b;
 $color-danger: #ef4444;
 $color-info: #3b82f6;
 
 // Light Theme
-
-$color-bg: #f8fafc;
+$color-bg: #EFF4FF;
+$color-bg-card: #f8fafc;
 $color-surface: #ffffff;
 $color-surface-secondary: #f1f5f9;
 
@@ -56,10 +53,9 @@ $color-text: #0f172a;
 $color-text-secondary: #475569;
 $color-text-tertiary: #64748b;
 
-$color-border: #e2e8f0;
+$color-border: #d5dae0;
 
 // Spacing
-
 $space-xs: 0.25rem; // 4px
 $space-sm: 0.5rem;  // 8px
 $space-md: 1rem;    // 16px
@@ -71,19 +67,16 @@ $space-4xl: 6rem;   // 96px
 $space-5xl: 8rem;   // 128px
 
 // Container
-
 $container-sm: 42rem; // 672px
 $container-md: 56rem; // 896px
 $container-lg: 72rem; // 1152px
 $container-xl: 80rem; // 1280px
 
 // Radius
-
 $radius-s: 8px;
 $radius-m: 12px;
 $radius-l: 16px;
 
 // Shadows
-
 $shadow-s: 0 2px 8px rgb(15 23 42 / 0.05);
-$shadow-m: 0 8px 24px rgb(15 23 42 / 0.08);
+$shadow-m: 0 8px 24px rgb(15 23 42 / 0.15);
