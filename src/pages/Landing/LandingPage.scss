@@ -33,6 +33,7 @@
 .functionalities__grid,
 .dashboard-preview,
 .how-it-works,
+.how-it-works__grid,
 .faqs {
   width: 100%;
   max-width: $container-xl;
@@ -69,7 +70,8 @@
 
 // Benefits & Functionalities section
 .benefits > p,
-.functionalities > p {
+.functionalities > p,
+.how-it-works > p {
   margin-bottom: $space-lg;
 
   @include laptop {
@@ -78,14 +80,16 @@
 }
 
 .benefits__grid,
-.functionalities__grid {
+.functionalities__grid,
+.how-it-works__grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: $space-md;
 }
 
 .benefits__card,
-.functionalities__card {
+.functionalities__card,
+.how-it-works__card {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -100,7 +104,8 @@
 }
 
 .benefits__icon,
-.functionalities__icon {
+.functionalities__icon,
+.how-it-works__icon {
   width: 2rem;
   height: 2rem;
   padding: $space-xs;
@@ -152,5 +157,26 @@
 
   @include laptop {
     min-width: 21rem;
+  }
+}
+
+// How it works
+.how-it-works__grid {
+  @include laptop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.how-it-works__card {
+  min-width: 10rem;
+  min-height: 8rem;
+
+  @include laptop {
+    min-height: 12rem;
+  }
+
+  @include desktop {
+    min-width: 27rem;
+    min-height: 10rem;
   }
 }
