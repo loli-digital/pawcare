@@ -74,15 +74,15 @@ function LandingPage() {
         <section className="how-it-works">
           <h2>{howItWorksSection.title}</h2>
           <p>{howItWorksSection.description}</p>
-          <div className="how-it-works__steps">
+          <div className="how-it-works__grid">
             {howItWorks.map((how) => {
               const Icon = how.icon;
               return (
-                <article className="how-it-works__step" key={how.id}>
-                  <Icon size={24} aria-hidden="true" />
-                  <div className="how-it-works__step-wrapper">
-                    <h3 className="how-it-works__step-title">{how.title}</h3>
-                    <p className="how-it-works__step-description">
+                <article className="how-it-works__card" key={how.id}>
+                  <Icon size={24} aria-hidden="true" className="how-it-works__icon"/>
+                  <div className="how-it-works__card-wrapper">
+                    <h3>{how.title}</h3>
+                    <p>
                       {how.description}
                     </p>
                   </div>
