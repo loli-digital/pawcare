@@ -17,6 +17,7 @@ function LandingPage() {
   return (
     <main className="landing">
       <div className="landing__wrapper">
+        {/* Hero section */}
         <section className="hero">
           <h1>{hero.title}</h1>
           <p>{hero.description}</p>
