@@ -257,7 +257,7 @@ export const faqs: Faqs[] = [
   },
   {
     id: 8,
-    question: "¿PawCare sustituye a mi veterinario?",
+    question: "¿PawCare sustituye a mi veterinario/a?",
     answer:
       "No. PawCare es una herramienta de organización y seguimiento. Las decisiones relacionadas con la salud de tu mascota deben ser tomadas siempre por profesionales veterinarios.",
   },
