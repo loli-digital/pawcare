@@ -1,3 +1,4 @@
+import { footerBrand, footerLinks } from "@/data";
 import "./Footer.scss";
 
 export function Footer() {
@@ -11,32 +12,18 @@ export function Footer() {
               alt="PawCare"
               className="footer__logo"
             />
-
-            <p className="footer__text">
-              Gestiona la salud, el peso, los tratamientos y las citas
-              veterinarias de tus mascotas desde un único lugar.
-            </p>
+            <p className="footer__text">{footerBrand.description}</p>
           </div>
 
           <nav className="footer__nav">
             <h3 className="footer__title">Navegación</h3>
 
             <ul className="footer__list">
-              <li>
-                <a href="#benefits">Características</a>
-              </li>
-
-              <li>
-                <a href="#functionalities">Funciones</a>
-              </li>
-
-              <li>
-                <a href="#how-it-works">Cómo funciona</a>
-              </li>
-
-              <li>
-                <a href="#faqs">Preguntas frecuentes</a>
-              </li>
+              {footerLinks.navigation.map((navigationLink) => (
+                <li>
+                  <a href={navigationLink.href}>{navigationLink.label}</a>
+                </li>
+              ))}
             </ul>
           </nav>
 
@@ -44,28 +31,22 @@ export function Footer() {
             <h3 className="footer__title">Cuenta</h3>
 
             <ul className="footer__list">
-              <li>
-                <a href="/login">Iniciar sesión</a>
-              </li>
-
-              <li>
-                <a href="/register">Crear cuenta</a>
-              </li>
+              {footerLinks.account.map((accountLink) => (
+                <li>
+                  <a href={accountLink.href}>{accountLink.label}</a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div className="footer__legal">
             <h3 className="footer__title">Legal</h3>
             <ul className="footer__list">
-              <li>
-                <a href="/privacy">Política de privacidad</a>
-              </li>
-              <li>
-                <a href="/terms">Términos y condiciones</a>
-              </li>
-              <li>
-                <a href="/contact">Contacto</a>
-              </li>
+              {footerLinks.legal.map((legalLink) => (
+                <li>
+                  <a href={legalLink.href}>{legalLink.label}</a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
