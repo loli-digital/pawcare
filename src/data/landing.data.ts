@@ -18,7 +18,7 @@ import {
 export const hero = {
   title: "La salud de tu mascota, siempre bajo control",
   description:
-    "PawCare centraliza historiales clínicos, curvas de peso biométricas, calendarios de vacunación, tratamientos farmacológicos y recordatorios inteligentes con la precisión de un software clínico y la sencillez que mereces",
+    "PawCare centraliza historiales clínicos, curvas de peso biométricas, calendarios de vacunación, tratamientos farmacológicos y recordatorios inteligentes con la precisión de un software clínico y la sencillez que mereces.",
   actions: {
     primary: {
       text: "Crear cuenta",
@@ -192,7 +192,7 @@ export type CTA = {
 export const cta: CTA = {
   title: "Su bienestar empieza con un buen cuidado",
   description:
-    "Ten toda la información de salud de tu mascota organizada y siempre a mano",
+    "Ten toda la información de salud de tu mascota organizada y siempre a mano.",
 };
 
 /* FAQ's */
