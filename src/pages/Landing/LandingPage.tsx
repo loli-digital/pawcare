@@ -23,7 +23,7 @@ function LandingPage() {
           <p>{hero.description}</p>
         </section>
         {/* Benefits */}
-        <section className="benefits">
+        <section className="benefits" id="benefits">
           <h2>{benefitsSection.title}</h2>
           <p>{benefitsSection.description}</p>
           <div className="benefits__grid">
@@ -46,7 +46,7 @@ function LandingPage() {
           </div>
         </section>
         {/* Functionalities */}
-        <section className="functionalities">
+        <section className="functionalities" id="functionalities">
           <h2>{functionalitiesSection.title}</h2>
           <p>{functionalitiesSection.description}</p>
           <div className="functionalities__grid">
@@ -81,7 +81,7 @@ function LandingPage() {
           {/* Captura real de la app */}
         </section>
         {/* How it works */}
-        <section className="how-it-works">
+        <section className="how-it-works" id="how-it-works">
           <h2>{howItWorksSection.title}</h2>
           <p>{howItWorksSection.description}</p>
           <div className="how-it-works__grid">
@@ -116,7 +116,7 @@ function LandingPage() {
             <button>Crear cuenta</button>
         </section>
         {/* FAQ's */}
-        <section className="faqs">
+        <section className="faqs" id="faqs">
           <h2>{faqsSection.title}</h2>
           <p>{faqsSection.description}</p>
           <div className="faqs__grid">
