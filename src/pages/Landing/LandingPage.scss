@@ -18,12 +18,6 @@
       gap: $space-4xl;
     }
   }
-
-  section {
-    p:not(:last-child) {
-      text-align: center;
-    }
-  }
 }
 // Section styles
 .hero,
@@ -57,14 +51,21 @@
   }
 }
 
+.hero > p,
+.benefits > p,
+.functionalities > p,
+.dashboard-preview > p,
+.how-it-works > p,
+.cta__text > p,
+.faqs > p {
+  text-align: center;
+}
+
 // Hero section
 .hero {
   h1 {
     max-width: $container-md;
     margin-bottom: $space-md;
-  }
-  p {
-    text-align: center;
   }
 }
 
