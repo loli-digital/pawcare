@@ -21,7 +21,7 @@ export function Footer() {
 
             <ul className="footer__list">
               {footerLinks.navigation.map((navigationLink) => (
-                <li>
+                <li key={navigationLink.id}>
                   <a href={navigationLink.href}>{navigationLink.label}</a>
                 </li>
               ))}
@@ -33,7 +33,7 @@ export function Footer() {
 
             <ul className="footer__list">
               {footerLinks.account.map((accountLink) => (
-                <li>
+                <li key={accountLink.id}>
                   <Link to={accountLink.href}>{accountLink.label}</Link>
                 </li>
               ))}
@@ -44,7 +44,7 @@ export function Footer() {
             <h3 className="footer__title">Legal</h3>
             <ul className="footer__list">
               {footerLinks.legal.map((legalLink) => (
-                <li>
+                <li key={legalLink.id}>
                   <Link to={legalLink.href}>{legalLink.label}</Link>
                 </li>
               ))}
