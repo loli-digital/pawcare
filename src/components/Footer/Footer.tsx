@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { footerBrand, footerLinks } from "@/data";
 import "./Footer.scss";
 
@@ -33,7 +34,7 @@ export function Footer() {
             <ul className="footer__list">
               {footerLinks.account.map((accountLink) => (
                 <li>
-                  <a href={accountLink.href}>{accountLink.label}</a>
+                  <Link to={accountLink.href}>{accountLink.label}</Link>
                 </li>
               ))}
             </ul>
@@ -44,7 +45,7 @@ export function Footer() {
             <ul className="footer__list">
               {footerLinks.legal.map((legalLink) => (
                 <li>
-                  <a href={legalLink.href}>{legalLink.label}</a>
+                  <Link to={legalLink.href}>{legalLink.label}</Link>
                 </li>
               ))}
             </ul>
