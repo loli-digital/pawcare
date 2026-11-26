@@ -136,7 +136,7 @@
     min-height: 16rem;
   }
 
-  @include desktop {
+  @include desktop-xl {
     min-width: 27rem;
     min-height: 10rem;
   }
@@ -148,7 +148,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @include desktop {
+  @include desktop-xl {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -177,7 +177,7 @@
     min-height: 12rem;
   }
 
-  @include desktop {
+  @include desktop-xl {
     min-width: 27rem;
     min-height: 10rem;
   }
