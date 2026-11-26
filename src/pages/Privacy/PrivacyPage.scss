@@ -1,0 +1,30 @@
+@use "@/styles/abstract/variables" as *;
+
+.privacy {
+  padding: 6rem 0;
+}
+
+.privacy__header {
+  margin-bottom: 3rem;
+}
+
+.privacy__title {
+  margin-bottom: 0.5rem;
+}
+
+.privacy__description {
+  color: $color-text-secondary;
+}
+
+.privacy__section {
+  margin-bottom: 2rem;
+}
+
+.privacy__section h2 {
+  margin-bottom: 1rem;
+}
+
+.privacy__section p {
+  color: $color-text-secondary;
+  line-height: 1.7;
+}
