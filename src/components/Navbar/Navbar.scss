@@ -1,0 +1,159 @@
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/mixins" as *;
+@use "@/styles/base/globals" as *;
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: rgba($color-surface, 0.96);
+  border-bottom: 1px solid $color-border;
+  backdrop-filter: blur(12px);
+
+  &__container {
+    width: 100%;
+    max-width: $container-xl;
+    height: 4.5rem;
+    margin: 0 auto;
+    padding: 0 $space-md;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-lg;
+
+    @include laptop {
+      padding: 0 $space-xl;
+    }
+  }
+
+  &__logo {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  &__logo-image {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  &__nav,
+  &__actions {
+    display: none;
+
+    @include laptop {
+      display: flex;
+    }
+  }
+
+  &__nav {
+    //margin-left: auto;
+  }
+
+  &__nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $space-md;
+  }
+
+  &__nav-item {
+    white-space: nowrap;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    color: $color-text-secondary;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &:focus-visible {
+      color: $color-primary;
+      outline: 2px solid $color-primary;
+      outline-offset: 4px;
+      border-radius: $radius-s;
+    }
+  }
+
+  &__actions {
+    align-items: center;
+    gap: $space-sm;
+  }
+
+  &__menu-button {
+    width: 2.75rem;
+    height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-bg;
+    border: 1px solid $color-border;
+    border-radius: $radius-s;
+    background-color: $color-primary;
+
+    @include laptop {
+      display: none;
+    }
+
+    &:hover {
+      color: $color-primary;
+      background-color: $color-surface-secondary;
+    }
+
+    &:focus-visible {
+      outline: 3px solid rgba($color-primary, 0.25);
+      outline-offset: 2px;
+    }
+  }
+
+  &__mobile-menu {
+    width: 100%;
+    padding: $space-md;
+    background-color: $color-surface;
+    border-top: 1px solid $color-border;
+    box-shadow: $shadow-m;
+
+    @include laptop {
+      display: none;
+    }
+  }
+
+  &__mobile-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__mobile-link {
+    display: flex;
+    align-items: center;
+    min-height: 3rem;
+    padding: 0 $space-sm;
+    color: $color-text-secondary;
+    border-radius: $radius-s;
+    font-weight: 500;
+
+    &:hover {
+      color: $color-primary;
+      background-color: $color-surface-secondary;
+    }
+  }
+
+  &__mobile-actions {
+    margin-top: $space-md;
+    padding-top: $space-md;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-sm;
+    border-top: 1px solid $color-border;
+  }
+}
