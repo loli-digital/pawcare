@@ -1,0 +1,37 @@
+@use "@/styles/abstract/variables" as *; 
+
+.contact {
+  padding: 6rem 0;
+}
+
+.contact__header {
+  margin-bottom: 3rem;
+}
+
+.contact__title {
+  margin-bottom: 0.5rem;
+}
+
+.contact__description {
+  color: $color-text-secondary;
+}
+
+.contact__section {
+  margin-bottom: 2rem;
+}
+
+.contact__section h2 {
+  margin-bottom: 1rem;
+}
+
+.contact__section p {
+  color: $color-text-secondary;
+  line-height: 1.7;
+}
+
+.contact__email {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: $color-primary;
+  font-weight: 600;
+}
