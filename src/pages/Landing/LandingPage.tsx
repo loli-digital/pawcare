@@ -11,6 +11,7 @@ import {
   faqsSection,
   faqs,
 } from "@/data";
+import { Button } from "@/components";
 import dogAndCat from "@/assets/images/dog-and-cat-CTA.svg";
 
 function LandingPage() {
@@ -113,7 +114,7 @@ function LandingPage() {
 
             <img src={dogAndCat} alt="Perro y gato juntos" aria-hidden="true" className="cta__image"/>
           </div>
-            <button>Crear cuenta</button>
+            <Button>Crear cuenta</Button>
         </section>
         {/* FAQ's */}
         <section className="faqs" id="faqs">
